@@ -37,3 +37,9 @@ function to() {
     echo 'Nothing matches that key. Sorry :('
 }
 
+pmv(){
+    source=$1;
+    target=$2;
+    mkdir -p "$target"/"$(dirname $source)"
+    mv "$source" "$target"/"$(dirname $source)"/
+}
